@@ -23,6 +23,8 @@ Request path: Cloudflare (CDN and WAF, proxied on 443) fronts Nginx, which rever
 3. Each node runs a pull agent that polls the manifest every ~5 minutes, fetches closures from the cache over Tailscale, switches to the new configuration atomically, runs a health check and rolls back on failure.
 4. Deploy metrics land in Prometheus, with alerts on failed deploys.
 
+Runnable reference implementation of this pipeline: [nixos-fleet-pipeline](https://github.com/marcothedood/nixos-fleet-pipeline).
+
 ## Security model
 
 - Secrets managed with sops-nix (age plus AWS KMS), decrypted at boot.
