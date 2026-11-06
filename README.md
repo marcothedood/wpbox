@@ -6,7 +6,7 @@ Interactive architecture diagram: **[marcothedood.github.io/wpbox](https://marco
 
 ## What it is
 
-A hosting platform that runs ~40 production WordPress sites on a fleet of NixOS machines. The whole stack, from PHP-FPM pools to firewall rules, is declared in Nix and built in CI. Nodes never get SSH deploys: they pull signed closures from a binary cache and switch atomically, with automatic rollback if the new configuration fails its health check.
+A hosting platform that runs ~45 production WordPress sites on a fleet of NixOS machines. The whole stack, from PHP-FPM pools to firewall rules, is declared in Nix and built in CI. Nodes never get SSH deploys: they pull signed closures from a binary cache and switch atomically, with automatic rollback if the new configuration fails its health check.
 
 ## Architecture
 
@@ -41,9 +41,9 @@ Runnable reference implementation of this pipeline: [nixos-fleet-pipeline](https
 
 | Metric | Value |
 |---|---|
-| Production WordPress sites | ~40 |
+| Production WordPress sites | ~45 |
 | Domains | 100+ |
-| Nodes | 9 EC2 Graviton (ARM64), NixOS |
+| Nodes | 10 EC2 Graviton (ARM64), NixOS |
 | Deploy method | Pull-based, atomic switch, auto rollback |
 
 ## Status
